@@ -37,6 +37,15 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
   /* Pseudo element is like a child of selected element. */
   /* inline by default. 100% of width and height means that
       it has same size of original element. */
