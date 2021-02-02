@@ -50,7 +50,7 @@
     }
   }
 
-  // .card hover할 때 card__side를 움직인다.
+  // .card hover할 때 card__side를 움직이게 만든다.
   // .card__side에 hover를 붙이지 않는 이유는 다른 side에도
   // hover를 붙일것이기 때문에.
   &:hover &__side--front {
@@ -62,13 +62,20 @@
   }
 
   // Front side styling
+
+  // - PICTURE
+  // - HEADING
+  // - DETAIL
+
   &__picture {
     background-size: cover;
     height: 23rem;
     background-blend-mode: screen;
+    // 2개의 BACKGROUND를 어떻게 BLENDING 할 것이냐
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 3px;
+    // Because of clip-path, overflow doesn't work.
 
     &--1 {
       background-image: linear-gradient(
